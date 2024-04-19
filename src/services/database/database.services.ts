@@ -1,6 +1,7 @@
 import { MongoClient, ServerApiVersion, Db, Collection } from 'mongodb'
 import Follow from '../../models/Follow.schema'
 import Notification from '../../models/Notification.schema'
+import 'dotenv/config'
 
 class DatabaseService {
   private client: MongoClient
