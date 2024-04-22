@@ -4,4 +4,5 @@ export const enum ActionNotify {
     COMMENT = 'comment',
     LIKE = 'like',
     MESSAGE = 'message',
+    FOLLOW = 'follow',
 }

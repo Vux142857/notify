@@ -27,10 +27,6 @@ class DatabaseService {
     }
   }
 
-  get follows(): Collection<Follow> {
-    return this.db.collection("follows")
-  }
-
   get notifications(): Collection<Notification> {
     return this.db.collection("notifications")
   }
