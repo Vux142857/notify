@@ -33,12 +33,14 @@ io.on('connection', async (socket: any) => {
     socketID: socket.id,
   })
 
+  socket.emit('inRoom', 'You are connected')
+
   socket.on('notify', async (data: NotificationConstructor) => {
     const toUser = sessionStore.findSession(data.to as string)
-    await notificationService.storeNotification(data)
     if (toUser) {
       socket.to(toUser.socketID).emit('receive notify', data)
     }
+    await notificationService.storeNotification(data)
   })
   socket.on('disconnect', () => {
     console.log('user disconnected');
