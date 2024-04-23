@@ -1,6 +1,6 @@
 import express from 'express'
 import databaseService from './services/database/database.services'
-import { defaultErrorHandler } from '../src/middlewares/error.middlewares'
+import { defaultErrorHandler } from './middlewares/error.middlewares'
 import cors from 'cors'
 import helmet from 'helmet'
 import { rateLimit } from 'express-rate-limit'
